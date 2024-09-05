@@ -9,6 +9,9 @@ for 36 years.
 From the live audience the user ATM confirmed this bug to be present for the V1 versions of the game. Namely, C64 and the first MS-DOS variant.
 Robert Megone hunted down the corresponding SCUMM script with its changes between V1 and V2:
 
+The scene in question:
+![Screenshot.\label{fig:Annie, unable to pick up the crystal}](fix.png)
+
 Buggy script:
 ```js
 [0000] (48) if (VAR_ACTIVE_VERB == 14) {
@@ -87,7 +90,7 @@ f3 69 73 2e 00              #[0035] (D8) printEgo("I wonder who would know what 
 ```
 
 Note, that the `pickupObject` was injected earlier, causing the relative jump to the end of the the second IF CLAUSE to become shorter by two bytes
-(0x4b -> 0x49) which also affected the script EOR checksum and required a change from 0x75 to 0x77 to produce a valid byte code.
+(`0x4b` -> `0x49`) which also affected the script EOR checksum and required a change from `0x75` to `0x77` to produce a valid byte code.
 The patched disk image was confirmed to fix the issue and allow a complete playthrough of this incredibly amazing game.
 
 ## Credits
