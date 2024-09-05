@@ -9,7 +9,7 @@ for 36 years.
 From the live audience the user ATM confirmed this bug to be present for the V1 versions of the game. Namely, C64 and the first MS-DOS variant.
 Robert Megone hunted down the corresponding SCUMM script with its changes between V1 and V2:
 
-The scene in question:
+The scene in question:\
 ![Screenshot.\label{fig:Annie, unable to pick up the crystal}](fix.png)
 
 Buggy script:
