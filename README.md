@@ -4,10 +4,10 @@ A bug in the original C64 version of Zak McKracken recenty surfaced during a liv
 [YouTube Conversations with Curtis](https://www.youtube.com/watch?v=HJ5CpEy4sio).
 It prevented Annie from picking up in yellow crystal shard.
 In most user experiences and playthroughs this action is carried out by Zak, though, which is why this bug remained unknown
-for 36 years.
+for **36 years**.
 
-From the live audience the user ATM confirmed this bug to be present for the V1 versions of the game. Namely, C64 and the first MS-DOS variant.
-Robert Megone hunted down the corresponding SCUMM script with its changes between V1 and V2:
+From the live audience the user *ATM* confirmed this bug to be present for the V1 versions of the game. Namely, C64 and the first MS-DOS variant.
+*Robert Megone* hunted down the corresponding SCUMM script with its changes between V1 and V2:
 
 The scene in question:\
 ![Screenshot.\label{fig:Annie, unable to pick up the crystal}](fix.png)
