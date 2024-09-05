@@ -104,7 +104,9 @@ Run this Python3 script with the name of the original disk image for Side 2 as p
 python patch_diskimage.py side2.d64
 ```
 The patched disk image is written as a new file.
-```6934f1a3c3c16cd6ca9ef0c31c7e0170  side2_patch.d64```bash
+```bash
+6934f1a3c3c16cd6ca9ef0c31c7e0170  side2_patch.d64
+```
 
 ## Credits
 - bug hunt: Robert Megone & user ATM 
