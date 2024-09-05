@@ -29,7 +29,9 @@ Buggy script:
 [0057] (**) }
 ```
 
-The `pickupObject` is only carried out for actors that are not Annie (`VAR_EGO != 2`).
+The `pickupObject` is only carried out for actors that are not Annie (`VAR_EGO != 2`),
+which looks like a very human error of block hierarchy. Note, that this text form of the script
+is not the original scripting language but a decompilation from [SCUMM-Decompilation-Archive](https://github.com/EricOakford/SCUMM-Decompilation-Archive).
 
 Working script of V2:
 ```js
@@ -93,6 +95,15 @@ Note, that the `pickupObject` was injected earlier, causing the relative jump to
 (`0x4b` -> `0x49`) which also affected the script EOR checksum and required a change from `0x75` to `0x77` to produce a valid byte code.
 The patched disk image was confirmed to fix the issue and allow a complete playthrough of this incredibly amazing game.
 
+## Usage
+Run this Python3 script with the name of the original disk image for Side 2 as parameter:
+```bash
+python patch_diskimage.py side2.d64
+```
+The patched disk image is written as a new file.
+
 ## Credits
 - bug hunt: Robert Megone & user ATM 
 - C64 patch: Martin Wendt
+
+
