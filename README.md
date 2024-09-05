@@ -105,7 +105,9 @@ The patched disk image was confirmed to fix the issue and allow a complete playt
 
 ## Usage
 Run this Python3 script with the name of the original disk image for Side 2 as a parameter:
-*Note: Only the English language release is currently supported.*
+
+**Note: Only the English language release is currently supported.**
+
 ```bash
 python patch_diskimage.py side2.d64
 ```
