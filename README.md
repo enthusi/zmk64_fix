@@ -32,6 +32,7 @@ Buggy script:
 The `pickupObject` is only carried out for actors that are not Annie (`VAR_EGO != 2`),
 which looks like a very human error of block hierarchy. Note, that this text form of the script
 is not the original scripting language but a decompilation from [SCUMM-Decompilation-Archive](https://github.com/EricOakford/SCUMM-Decompilation-Archive).
+You may want to refer to [*The Mansion – Technical Aspects*](https://www.pagetable.com/?p=603) for details on the C64 scripts.
 
 Working script of V2:
 ```js
