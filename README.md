@@ -1,8 +1,8 @@
 # zmk64_fix
-Fix for the C64 version of Zak McKracken to re-empower Annie 
-A bug in the original C64 version of Zak McKracken recenty surfaced during a live playthrough
+Fix for the C64 version of Zak McKracken to re-empower Annie.\
+A bug in the original C64 version of Zak McKracken recently surfaced during a live playthrough
 [YouTube Conversations with Curtis](https://www.youtube.com/watch?v=HJ5CpEy4sio).
-It prevented Annie from picking up in yellow crystal shard.
+It prevented Annie from picking up the precious yellow crystal shard.
 In most user experiences and playthroughs this action is carried out by Zak, though, which is why this bug remained unknown
 for **36 years**.
 
