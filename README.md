@@ -52,6 +52,9 @@ Working script of V2:
 
 The next step was to locate the corresponding byte code of this script in the C64 game data.
 It resides on disk 2.
+The data in `[]` refers to the relative address offset within the byte code.\
+The hexdecimal number in `()` relates to the actual OPCODE while the additional data on the left reflects
+the actual byte code including all parameters.\
 The buggy byte code:
 
 ```js
