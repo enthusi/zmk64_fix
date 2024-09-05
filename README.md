@@ -1,5 +1,9 @@
 # zmk64_fix
-Fix for the C64 version of Zak McKracken to re-empower Annie.\
+
+# 📰 **Brain-Boggling Bytecode Crossing Everyone’s Wires**
+
+Fix for the C64 version of [Zak McKracken](https://en.wikipedia.org/wiki/Zak_McKracken_and_the_Alien_Mindbenders) to re-empower Annie.
+
 A bug in the original C64 version of Zak McKracken recently surfaced during a live playthrough
 [YouTube Conversations with Curtis](https://www.youtube.com/watch?v=HJ5CpEy4sio).
 It prevented Annie from picking up the precious yellow crystal shard.
@@ -7,7 +11,7 @@ In most user experiences and playthroughs this action is carried out by Zak, tho
 for **36 years**.
 
 From the live audience the user *ATM* confirmed this bug to be present for the V1 versions of the game. Namely, C64 and the first MS-DOS variant.
-*Robert Megone* hunted down the corresponding SCUMM script with its changes between V1 and V2:
+Robert Megone hunted down the corresponding SCUMM script with its changes between V1 and V2:
 
 The scene in question:\
 ![Screenshot.\label{fig:Annie, unable to pick up the crystal}](fix.png)
@@ -100,7 +104,7 @@ Note, that the `pickupObject` was injected earlier, causing the relative jump to
 The patched disk image was confirmed to fix the issue and allow a complete playthrough of this incredibly amazing game.
 
 ## Usage
-Run this Python3 script with the name of the original disk image for Side 2 as parameter:
+Run this Python3 script with the name of the original disk image for Side 2 as a parameter:
 ```bash
 python patch_diskimage.py side2.d64
 ```
@@ -110,7 +114,10 @@ The patched disk image is written as a new file.
 ```
 
 ## Credits
-- bug hunt: Robert Megone & user ATM 
-- C64 patch: Martin Wendt
+- Bug hunt: [Robert Megone](https://github.com/robertmegone) & user ATM 
+- C64 patch: [Martin Wendt](https://github.com/enthusi)
 
-
+## Further information and resources
+- :memo:[Scumm Technical Reference](https://wiki.scummvm.org/index.php?title=SCUMM/Technical_Reference)
+- :hammer:[descumm (from the ScummVM Tools package)](https://wiki.scummvm.org/index.php?title=ScummVM_Tools#descumm)
+- :tv:[How the C64 Started Point-and-Click Adventures(Video)](https://www.youtube.com/watch?v=scKGmxWP1mE)
