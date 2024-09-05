@@ -2,7 +2,7 @@
 
 # 📰 **Brain-Boggling Bytecode Crossing Everyone’s Wires**
 
-Fix for the English Language C64 version of [Zak McKracken](https://en.wikipedia.org/wiki/Zak_McKracken_and_the_Alien_Mindbenders) to re-empower Annie.
+Fix for the English language C64 version of [Zak McKracken](https://en.wikipedia.org/wiki/Zak_McKracken_and_the_Alien_Mindbenders) to re-empower Annie.
 
 A bug in the original C64 version of Zak McKracken recently surfaced during a live playthrough
 [YouTube Conversations with Curtis](https://www.youtube.com/watch?v=HJ5CpEy4sio).
