@@ -2,7 +2,7 @@
 
 # 📰 **Brain-Boggling Bytecode Crossing Everyone’s Wires**
 
-Fix for the C64 version of [Zak McKracken](https://en.wikipedia.org/wiki/Zak_McKracken_and_the_Alien_Mindbenders) to re-empower Annie.
+Fix for the English Language C64 version of [Zak McKracken](https://en.wikipedia.org/wiki/Zak_McKracken_and_the_Alien_Mindbenders) to re-empower Annie.
 
 A bug in the original C64 version of Zak McKracken recently surfaced during a live playthrough
 [YouTube Conversations with Curtis](https://www.youtube.com/watch?v=HJ5CpEy4sio).
@@ -105,6 +105,7 @@ The patched disk image was confirmed to fix the issue and allow a complete playt
 
 ## Usage
 Run this Python3 script with the name of the original disk image for Side 2 as a parameter:
+*Note: Only the English language release is currently supported.*
 ```bash
 python patch_diskimage.py side2.d64
 ```
