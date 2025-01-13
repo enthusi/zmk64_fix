@@ -1,4 +1,6 @@
 import sys
+import array
+
 import numpy as np
 
 patch_old=[0x75, 0x48, 0x08, 0x0e, 0x00, 0x51, 0x00,\
@@ -20,18 +22,30 @@ patch_new=[0x77, 0x48, 0x08, 0x0e, 0x00, 0x51, 0x00,\
     0xd8, 0xc9, 0x77, 0x6f, 0x6e, 0x64, 0x65, 0xf2, 0x77, 0x68, 0xef, 0x77, 0x6f, 0x75, 0x6c, 0xe4, 0x6b, 0x6e, 0x6f, 0xf7, 0x77, 0x68, 0x61, 0xf4, 0x74, 0x68, 0x69, 0xf3, 0x69, 0x73, 0x2e, 0x00, \
     0x62, 0x00 ]
 
-position = 0xee47
+def search_sequence_numpy(arr,seq):
+    Na, Nseq = arr.size, seq.size
+    r_seq = np.arange(Nseq)
+    M = (arr[np.arange(Na-Nseq+1)[:,None] + r_seq] == seq).all(1)
+    if M.any() >0:
+        return np.where(np.convolve(M,np.ones((Nseq),dtype=int))>0)[0]
+    else:
+        return []
 
 infile=open(sys.argv[1],'rb')
+
 data=list(bytearray(infile.read()))
 data=np.array(data,dtype='uint8')
 original_array=np.array(patch_old)
 new_array=np.array(patch_new)
 
-if (data[position:position+len(original_array)] != original_array).all():
+try:
+    pos= search_sequence_numpy(data,original_array)[0]
+    print('Original array found at 0x%x' % pos)
+except:
     print ('Bad disk image')
     sys.exit(1)
-data[position:position+len(original_array)] = new_array
+
+data[pos:pos+len(original_array)] = new_array
 outfile=open(sys.argv[1][:-4]+'-patch.d64','wb')
 outfile.write((data.tobytes()))
 outfile.close()
